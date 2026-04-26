@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Haven | Premium Brews</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Coffee Haven</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="cart-icon" id="cartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Premium Brews.</h1>
+            <p>Experience the finest artisan coffee, crafted with passion and perfection.</p>
+            <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>At Coffee Haven, we believe that every cup of coffee tells a story. Sourced from the highest altitude farms around the world, our beans are meticulously roasted to bring out their unique, rich flavors.</p>
+                    <p>Our expert baristas craft each beverage with precision, ensuring that your daily ritual becomes a moment of pure luxury and indulgence.</p>
+                </div>
+                <div class="about-image placeholder-img">
+                    <div class="img-mockup"><i class="fas fa-coffee"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Premium Selection</h2>
+            <div class="menu-grid" id="menuGrid">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="locations">
+        <div class="container">
+            <h2 class="section-title">Our Cafes</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3>Handcrafted Cafe and Roastery</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>2nd floor, E-2/ 69, E-2, Arera Colony, Bhopal, Madhya Pradesh 462016</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sun: 10am - 10pm</p>
+                    <p><i class="fas fa-phone"></i> 0626242488</p>
+                </div>
+                <div class="location-card">
+                    <h3>CAFE AMADO</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> E-3/75, Arera Colony, Besides IDFC First Bank, near Narmada hospital, Bhopal, Madhya Pradesh 462016</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sun: 10am - 10pm</p>
+                    <p><i class="fas fa-phone"></i> 0860265204</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">Customer Experiences</h2>
+            <div class="reviews-grid" id="reviewsContainer">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The best cappuccino I've ever had. The ambiance is incredibly cozy and luxurious."</p>
+                    <h4>- Sarah J.</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"A true haven for coffee lovers. Their pour-over is perfection."</p>
+                    <h4>- Michael T.</h4>
+                </div>
+            </div>
+
+            <div class="review-form-container">
+                <h3>Write a Review</h3>
+                <form id="reviewForm">
+                    <input type="text" id="reviewerName" placeholder="Your Name" required>
+                    <select id="reviewRating" required>
+                        <option value="5">★★★★★ (5/5)</option>
+                        <option value="4">★★★★☆ (4/5)</option>
+                        <option value="3">★★★☆☆ (3/5)</option>
+                        <option value="2">★★☆☆☆ (2/5)</option>
+                        <option value="1">★☆☆☆☆ (1/5)</option>
+                    </select>
+                    <textarea id="reviewText" placeholder="Share your experience..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <div class="logo">Coffee Haven</div>
+            <p>&copy; 2026 Coffee Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeCartBtn">&times;</button>
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cartItemsContainer">
+                <!-- Cart items added here -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalAmount">₹0.00</span>
+            </div>
+
+            <div class="checkout-section">
+                <h3>Payment Method</h3>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="card" checked>
+                        <span><i class="fas fa-credit-card"></i> Credit Card</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="paypal">
+                        <span><i class="fab fa-paypal"></i> PayPal</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="crypto">
+                        <span><i class="fab fa-bitcoin"></i> Crypto</span>
+                    </label>
+                </div>
+                
+                <div class="address-section">
+                    <h3>Delivery Address</h3>
+                    <textarea id="deliveryAddress" placeholder="Enter your full address..." rows="3"></textarea>
+                </div>
+
+                <button class="btn btn-primary checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content text-center">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h2>Order Confirmed!</h2>
+            <p>Your premium coffee is being prepared.</p>
+            <div class="order-tracking">
+                <p><strong>Order Tracking Status:</strong></p>
+                <div class="status-badge" id="trackingStatus">Preparing...</div>
+            </div>
+            <button class="btn btn-primary" id="closeSuccessBtn" style="margin-top: 20px;">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
